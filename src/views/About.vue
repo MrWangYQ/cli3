@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <p> test 2 新增标签 </p>
     <h1><a :href="getURL" target="_blank"> This is an about page</a></h1>
     <TS tsname='This is TS' tstype='vmess'></TS>
   </div>
