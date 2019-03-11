@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <p> test 新增 标签</p>
+    <p> test 新增 标签 </p>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-    <button @click="flag = !flag"> handle </button>
-    <dialog></dialog>
+    <button @click="handle"> handle </button>
+    <Dialog :showFlag='flag'></Dialog>
   </div>
 </template>
 
@@ -19,12 +19,20 @@ import Dialog from '@/components/Dialog.vue';
   },
 })
 export default class Home extends Vue {
-  flag:Boolean = false
+  name: string = 'Home';
+  flag: Boolean = false;
+  mounted(): void {
+    // console.log(this.flag, 'flag');
+  }
+  handle() {
+    this.flag = !this.flag;
+    // console.log('-----------', this.flag);
+  }
 }
 </script>
 <style lang="less" scoped>
   .home {
-    color: antiquewhite;
+    color: #303030;
   }
 </style>
 
