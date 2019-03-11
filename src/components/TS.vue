@@ -28,7 +28,7 @@ export default class TS extends Vue {
     }
     // created ---> javascript
     created(): void {
-        console.log('created', this.tstype);
+        // console.log('created', this.tstype);
     }
     // computed
     get exclamationMarks(): string {
